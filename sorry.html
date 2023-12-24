@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apology</title>
+  <link rel="stylesheet" href="sorry_styles.css">
+</head>
+<body>
+    <div class="apology-container">
+        <div class="content">
+              <img src="https://media.giphy.com/media/TfY8KatjhvM372wDSz/giphy.gif" alt="Apology Image" class="apology-image">
+
+      <h1>I'm Sorry Priyaaa.....</h1>
+      <p>I want to apologize for my mistakes and the hurt I've caused you.</p>
+      <p>I truly value our relationship and cherish the love we share.</p>
+      <p>Please know that I'm committed to making things right and learning from this experience.</p>
+      <p>Please forgive me as I promise to do better and be there for you.</p>
+      <h1>Do you forgive me?</h1>
+
+      <div class = "buttons">
+        <button class="btn" id = "openModalBtn" onclick="nextPage()">Yes</button>
+        <button class="btn" id="noButton" onclick="sayYes()">No</button>
+        <script>
+         function   nextPage() { 
+                window.location.href = "index.html"; 
+             } 
+
+             function sayYes(){
+                window.alert("You don't have any other option.Maaf to krna hi padega. Thanks in advance. Love You Motuu")
+             }
+              
+             function moveButton() { 
+                 var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth); 
+                 var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight); 
+                 document.getElementById('noButton').style.left = `${x}px`; 
+                 document.getElementById('noButton').style.top = `${y}px`; 
+             } 
+        </script> 
+    </div>
+      <img src="https://media.giphy.com/media/fxU6WfJ8eembhmZBC6/giphy.gif" alt="Apology Image" class="apology-image">
+
+    </div>
+
+        <div class="content">
+          <div class="modal" id="apologyModal">
+            <div class="modal-content">
+              <span class="close" id="closeModalBtn">&times;</span>
+              <h1>Thanks for forgiving me.</h1>
+              <h2>Love You Always</h2>
+              <h2>Are You Ready for the next Question?</h2>
+              <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onclick="nextPage()">Ha Jarur</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <script>
+        // JavaScript code here
+        const modal = document.getElementById('apologyModal');
+        const btn = document.getElementById('openModalBtn');
+        const closeBtn = document.getElementById('closeModalBtn');
+    
+        btn.onclick = function() {
+          modal.style.display = 'block';
+        };
+    
+        closeBtn.onclick = function() {
+          modal.style.display = 'none';
+        };
+    
+        window.onclick = function(event) {
+          if (event.target === modal) {
+            modal.style.display = 'none';
+          }
+        };
+      </script>
+</div>
+</body>
+</html>
+
+
+
+
